@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 // Database
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = 
-monk('10.11.33.211:27017/finalapp-21516031');
+var db =
+  monk('10.11.33.211:27017/finalapp-21516031');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -27,22 +27,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // Make our db accessible to our router
-app.use(function(req,res,next){
-    req.db = db;
-    next();
+app.use(function (req, res, next) {
+  req.db = db;
+  next();
 });
 app.use('/', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
