@@ -120,6 +120,7 @@ function addUser(event) {
         });
     }
     else {
+
         // If errorCount is more than 0, error out
         alert('Please fill in all fields');
         return false;
@@ -154,7 +155,6 @@ function deleteUser(event) {
             populateTable();
 
         });
-
     }
     else {
 
