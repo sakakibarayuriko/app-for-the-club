@@ -1,7 +1,7 @@
 
 body {
-  padding: 30px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 30px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 h2 {
@@ -9,7 +9,7 @@ h2 {
 }
 
 a {
-  color: #00B7FF;
+	color: #00B7FF;
 }
 
 #wrapper {
@@ -36,11 +36,11 @@ a {
 			border-collapse:collapse;
 			border-spacing:0px;
 		}
-			#userList table td {
-				background:#FFF;
-				padding:5px 10px;
-				text-align:center;
-			}
+		#userList table td {
+			background:#FFF;
+			padding:5px 10px;
+			text-align:center;
+		}
 
 #userInfo {
 	width:250px;
